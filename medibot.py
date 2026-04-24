@@ -17,16 +17,41 @@ HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/js
 # ── Simple CSS ─────────────────────────────────────────────
 st.markdown("""
 <style>
-    body { font-family: sans-serif; background: #f5f7fa; }
-    #MainMenu, footer { visibility: hidden; }
+    /* Full page background image */
+    .stApp {
+        background-image: url("https://imgs.search.brave.com/z3-6w_vGR6h_FZLgpLU48huEMXuDtsl7T0KbN3WWYfk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/Y2xlYW4tbWVkaWNh/bC1iYWNrZ3JvdW5k/XzUzODc2LTk3OTI3/LmpwZz9zZW10PWFp/c19oeWJyaWQmdz03NDA");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    /* Hide Streamlit default elements */
+    #MainMenu, footer, header {
+        visibility: hidden;
+    }
+
+    /* Transparent content container */
+    .block-container {
+        background: rgba(255, 255, 255, 0.88);
+        padding: 2rem;
+        border-radius: 18px;
+        margin-top: 2rem;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    /* Result box */
     .result {
-        background: black;
+        background: rgba(255, 255, 255, 0.95);
         padding: 20px;
         border-radius: 12px;
         border-left: 5px solid #2563eb;
         margin-top: 16px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        color: black;
     }
+
+    /* Button styling */
     .stButton > button {
         background: #2563eb;
         color: white;
@@ -35,6 +60,12 @@ st.markdown("""
         padding: 10px 24px;
         font-weight: bold;
         width: 100%;
+    }
+
+    /* Input styling */
+    textarea {
+        background: rgba(255,255,255,0.95) !important;
+        border-radius: 10px !important;
     }
 </style>
 """, unsafe_allow_html=True)
