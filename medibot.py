@@ -9,6 +9,8 @@ import base64
 
 # ── Setup ──────────────────────────────────────────────────
 st.set_page_config(page_title="MediBot", page_icon="🩺")
+st.title("🩺 MediBot")
+st.caption("AI Medical Assistant — Symptom Checker & Medicine Analyzer")
 
 API_KEY = "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"
 URL     = "https://api.groq.com/openai/v1/chat/completions"
