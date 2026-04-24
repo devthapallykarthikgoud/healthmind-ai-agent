@@ -80,6 +80,44 @@ textarea {
 
 </style>
 """, unsafe_allow_html=True)
+st.markdown("""
+<style>
+
+/* Force all text inside main container to dark */
+h1, h2, h3, h4, h5, h6,
+p, label, div, span {
+    color: #0f172a !important;
+}
+
+/* Streamlit text input labels */
+label {
+    font-weight: 600 !important;
+}
+
+/* Warning box text */
+[data-testid="stAlertContainer"] {
+    color: #111827 !important;
+}
+
+/* Tabs text */
+button[data-baseweb="tab"] {
+    color: #0f172a !important;
+    font-weight: 600 !important;
+}
+
+/* Placeholder text */
+textarea::placeholder {
+    color: #64748b !important;
+    opacity: 1 !important;
+}
+
+/* Caption text */
+.css-10trblm {
+    color: #334155 !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
 # ── Call LLM ───────────────────────────────────────────────
 def ask_llm(prompt):
     """Send prompt to Groq LLM and return the answer."""
